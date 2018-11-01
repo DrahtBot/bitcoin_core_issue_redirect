@@ -1,8 +1,7 @@
 use std::io::Write;
 
-
 fn main() {
-    for i in 0..100 {
+    for i in 0..100000 {
         let file = std::fs::File::create(format!("r/{}.html", i)).unwrap();
 
         let content = format!(
@@ -16,6 +15,8 @@ fn main() {
 </html>",
             i
         );
-        std::io::BufWriter::new(&file).write(&content.as_bytes()).unwrap();
+        std::io::BufWriter::new(&file)
+            .write(&content.as_bytes())
+            .unwrap();
     }
 }
