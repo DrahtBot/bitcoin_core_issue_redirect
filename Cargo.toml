@@ -1,0 +1,6 @@
+[package]
+name = "gen_redirects"
+version = "0.1.0"
+authors = ["MarcoFalke <falke.marco@gmail.com>"]
+
+[dependencies]
